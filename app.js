@@ -34,6 +34,8 @@ app.post('/messages', (req, res) => {
     }
     pusher.trigger('chat', 'message', payload);
     res.send(payload)
+    console.log(req.body.text)
+    
 })
 
 app.listen(app.get('port'), () => {
