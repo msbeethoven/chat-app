@@ -35,6 +35,7 @@ app.post('/messages', (req, res) => {
     pusher.trigger('chat', 'message', payload);
     res.send(payload)
     console.log(req.body.text)
+    console.log(payload)
     
 })
 
